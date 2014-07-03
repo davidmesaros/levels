@@ -36,14 +36,10 @@ ActiveRecord::Schema.define(version: 20140701063346) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "avatar"
-    t.string   "body"
-    t.string   "password_digest"
-    t.boolean  "is_admin",        default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "name"
+    t.string "email"
+    t.string "avatar"
+    t.string "body"
   end
 
 end
