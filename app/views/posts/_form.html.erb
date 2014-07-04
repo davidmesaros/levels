@@ -1,37 +1,39 @@
+<div class="user">
 
+ <ul>
+  <div class="userfonts">
 
-
-   <div class="show">
-    <%= form_for @post do |f| %>
+   <%= form_for @post do |f| %>
     <% @post.errors.full_messages.each do |error| %>
       <li><%= error %></li>
       <% end %>
-    <div class="background">
-      <p><%= f.label :user_id %>
+   <li>
+      <%= f.label :user_id %>
       <%= f.select :user_id, User.all.map{|user|[user.name, user.id]}, :include_blank => true %>
+   </li>
 
-     </p>
-     <p>
+   <li>
+     
       <%= f.label :title %>
       <%= f.text_field :title %>
-    </p>
-
+    </li>
+   <li>
     <%=f.label :body %><br/>
     <%=f.text_area :body %>
-    </p>
+   </li> 
 
-    <p>
+  <li>
      <%= f.label :image %>
     <%= f.text_field :image %>
-   </p>
-
+   
+   </li>
    
     <p> <%= f.submit %> </p>
 
     <% end %>
 
   </div>
-
+ </ul>
 </div>
 
-</div>
+

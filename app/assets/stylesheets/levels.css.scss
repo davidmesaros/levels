@@ -14,7 +14,7 @@
 
 }
 
-.large12{
+.large12 {
 	background-image: image-url('treetants2.jpg');
 	background-position: middle;
 	-webkit-background-size: contain;
@@ -182,9 +182,30 @@ strong{
 	font-weight:normal;
 }
 
-input .css_avatar{
-	background: red;
+button{
+	width:200px;
+	  height: 40px;
+	  border: 1px solid  ;
+	  background-color: rgba(0,0,0,0.8);
+	  border: 2px solid #000;
+	  color:  rgba(255,255,255,0.9);
+	  border-radius: 10px;
+	  outline: 0;
+	  font-weight: italic;
+	  font-size: 24px;
+      padding: 10px;  
 }
+
+/*header{
+	margin
+}*/
+
+.show form li{
+	background: white;
+	
+}
+
+
 
 
 

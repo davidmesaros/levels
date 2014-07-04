@@ -3,22 +3,21 @@
 <div class="show">
 <%= form_for @user do |f| %>
 
-    <%= f.text_field :name,  :placeholder => "Full Name", :autofocus => true, :class => "css_class" %>
-  </p>
+   <li> <%= f.text_field :name,  :placeholder => "Full Name", :autofocus => true, :class => "css_class" %></li>
 
-  <p>
     
-    <%= f.text_field :email, :placeholder => "Email", :class => "css_class" %>
-  </p>
+   <li> <%= f.text_field :email, :placeholder => "Email", :class => "css_class" %></li>
+  
 
      
-    <%= f.file_field :avatar, :class => "css_avatar"  %>
-    <%= f.hidden_field :avatar_cache, :class => "css_avatar" %>
-  </p>
+   <li> <%= f.file_field :avatar, :class => "css_avatar"  %></li>
+    <li><%= f.hidden_field :avatar_cache, :class => "css_avatar" %></li>
+  
   
  
 
-  <p><%= f.button 'Create User' %></p>
+  <%= f.button 'Create User' %>
+  <hr>
 <% end %>
   </div>
 </div>
