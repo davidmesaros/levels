@@ -1,12 +1,12 @@
 
-<div class="background">
+
 
    <div class="show">
     <%= form_for @post do |f| %>
     <% @post.errors.full_messages.each do |error| %>
       <li><%= error %></li>
       <% end %>
-
+    <div class="background">
       <p><%= f.label :user_id %>
       <%= f.select :user_id, User.all.map{|user|[user.name, user.id]}, :include_blank => true %>
 
@@ -29,6 +29,8 @@
     <p> <%= f.submit %> </p>
 
     <% end %>
+
+  </div>
 
 </div>
 

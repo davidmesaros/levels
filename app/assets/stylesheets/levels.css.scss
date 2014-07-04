@@ -84,12 +84,14 @@ hr{
 
 .userfont{
 	padding-top: 30px;
+
 }
 
 .userfont a{
 	text-decoration: none;
 	color:black;
-	font:bold;
+
+	
 
 }
 
@@ -166,8 +168,23 @@ h1{
 	color:black;
 }
 
+.postview{
+	color:black;
 
+}
 
+.postbody{
+	width: 500px;
+	margin-left: 450px;
+}
+
+strong{
+	font-weight:normal;
+}
+
+input .css_avatar{
+	background: red;
+}
 
 
 

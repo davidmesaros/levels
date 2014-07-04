@@ -5,20 +5,23 @@
 <ul>
 
 
-  <% @posts.each do |post| %>
+  <% @posts.reverse.each do |post| %>
 
 
   <div class="userfont">
 
-     <li>User: <%= link_to(post.user.name, post_path(post)) if post.user %> </li>
-     
+    <li><% if post.user %></li>
+       <li>User: <%= link_to(post.user.name, post_path(post)) %> </li>
+    <% else %>
+       <li>User: <%= post.name  %> </li>
+    <% end %>   
      <div class="truncate">
-     <li><%= image_tag(post.user.avatar_url, :class => 'thumb') if post.user   %></li>
-     <li>Title: <%= link_to(truncate(raw(post.title)), post_path(post), escape: false) %></li>
+           <li><%= image_tag(post.user.avatar_url, :class => 'thumb') if post.user   %></li>
+           <li>Title: <%= link_to(truncate(raw(post.title)), post_path(post), escape: false) %></li>
 
-  
-    <li>Post: <%= truncate(raw(post.body), escape: false) %> </li>
-   </div>
+        
+          <li>Post: <%= truncate(raw(post.body), escape: false) %> </li>
+       </div>
     
     
      <%= link_to'Delete', post, :class => 'delete',:method => :delete, :confirm => "Are you sure you want to delete this Post?" %>
@@ -64,7 +67,7 @@
 
 </div>
 
-   <!--  <%= @tumblr_post %> -->
+ <!--  <%= @tumblr_post %> -->
 
 
    
