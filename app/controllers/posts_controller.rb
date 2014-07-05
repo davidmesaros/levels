@@ -14,15 +14,19 @@ class PostsController < ApplicationController
      :oauth_token_secret => @oauth_token_secret
      })
 
-      @tumblr_post = @myClient.posts('davidmes.tumblr.com', :limit => 6)
+      @tumblr_post = @myClient.posts('davidmes.tumblr.com', :limit => 2)
       @tumblr_post['posts'].each do |post|
         existing_post = Post.find_by(:tumblr_id => post['id'].to_s)
         if existing_post.nil?
           local_post = Post.create(:name => post['blog_name'], :title => post['slug'], :tumblr_id => post['id'], :body => post['body'] || post['caption'])
           User.first.posts << local_post # Fix this.
+        else
+          existing_post.destroy
         end
       end
+     
       @posts = Post.all
+
    end 
 
    def create
@@ -44,16 +48,19 @@ class PostsController < ApplicationController
   end
   
   def update
-    post = Post.find params[:id]
+    post = Post.find params[:id] 
     post.update post_params
     redirect_to post
   end
   
   def destroy
-    post = Post.find params[:id]
+    post = Post.find params[:id] 
     post.destroy
     redirect_to posts_path
+  
   end
+
+
 
   def author
     @posts = Post.where(:user_id => params[:id])

@@ -1,7 +1,8 @@
 
 
-
-<h1 class='create'><%= link_to(@post.user.name, @post.user) if @post.user %></h1>	
+<div class='create'>
+<h1 ><%= link_to(@post.user.name, @post.user) if @post.user %></h1>	
+</div>
 
 
 
@@ -11,13 +12,16 @@
 <div class="userfont">
    <div class="postview">
 
-		<li><%= image_tag(@post.user.avatar_url, :class => 'thumb') if @post.user %><li>
+		<li><%= image_tag(@post.user.avatar_url, :class => 'thumb') if @post.user %></li>
 
 		<hr>
         
+
+        <div class="postbody">
 		<li>Title: <%= @post.title %></li>
-       <div class="postbody">
+        <div class="tumblrpost">
 		<li> <%= raw(@post.body) %></li>
+	    </div>
 	   </div>
 
 		<li><%= image_tag(@post.image, :class => 'xthumb') %></li>
@@ -38,6 +42,8 @@
 
 
 </ul>
+
+
 
 
 

@@ -14,7 +14,7 @@
 
 }
 
-.large12 {
+.large12{
 	background-image: image-url('treetants2.jpg');
 	background-position: middle;
 	-webkit-background-size: contain;
@@ -43,7 +43,7 @@
 	text-decoration: none;
 	color: white;
 	text-align: left;
-	
+
 }
 
 li{
@@ -55,7 +55,7 @@ ul{
 	background-color: white;
 	max-width: 100%;
 	margin: -10px;
-	
+
 }
 
 .user li{
@@ -84,14 +84,12 @@ hr{
 
 .userfont{
 	padding-top: 30px;
-
 }
 
 .userfont a{
 	text-decoration: none;
 	color:black;
-
-	
+	font:bold;
 
 }
 
@@ -117,7 +115,10 @@ h1{
 
 .create{
 	margin-top:330px;
-	margin-left: 40px;
+	
+	color:white;
+	text-decoration: none;
+	width: 100%;
 }
 
 .avatar{
@@ -157,10 +158,11 @@ h1{
 }
 
 .create a{
-	
+    
 	color:white;
 	text-decoration: none;
 	
+
 
 }
 
@@ -168,18 +170,8 @@ h1{
 	color:black;
 }
 
-.postview{
-	color:black;
-
-}
-
-.postbody{
-	width: 500px;
-	margin-left: 450px;
-}
-
-strong{
-	font-weight:normal;
+.show{
+	padding-top: 20px;
 }
 
 button{
@@ -196,13 +188,26 @@ button{
       padding: 10px;  
 }
 
-/*header{
-	margin
-}*/
+strong{
+	font-weight: normal;
+}
 
-.show form li{
-	background: white;
-	
+h2{
+	margin-left:80px;
+}
+
+.postbody{
+	color:black;
+
+}
+
+.truncate{
+	font-style: normal;
+}
+
+.tumblrpost{
+	width:500px;
+	margin-left: 450px;
 }
 
 
